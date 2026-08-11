@@ -20,7 +20,7 @@ class RetseptListCreateAPIView(ListCreateAPIView):
         if qiyinlik_darajasi:
             queryset = queryset.filter(qiyinlik_darajasi = qiyinlik_darajasi)
         if maksimal_vaqt:
-            queryset = queryset.filter(maksimal_vaqt_lte = maksimal_vaqt)
+            queryset = queryset.filter(pishirish_vaqti__lte = maksimal_vaqt)
 
         return queryset
 
